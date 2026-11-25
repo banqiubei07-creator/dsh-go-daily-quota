@@ -1,0 +1,41 @@
+{
+  "name": "local-daily-quota",
+  "version": "0.2.0",
+  "description": "dsh-go 输入框上方状态条：今日花费、账户余额与 DeepSeek 峰谷时段提示",
+  "license": "MIT",
+  "keywords": [
+    "dsh-go",
+    "plugin",
+    "deepseek",
+    "balance",
+    "pricing"
+  ],
+  "private": true,
+  "type": "module",
+  "main": "lib/index.js",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "engines": {
+    "dsh": ">=0.2.1-rc.2 <0.3.0-0"
+  },
+  "dshGo": {
+    "v": 1,
+    "title": {
+      "zh": "今日额度",
+      "en": "Daily quota"
+    },
+    "icon": "coin",
+    "contributes": {
+      "composer.strip": [
+        {
+          "id": "quota",
+          "icon": "coin",
+          "text": "今日额度"
+        }
+      ]
+    }
+  }
+}
